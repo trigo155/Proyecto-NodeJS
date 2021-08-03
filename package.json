@@ -19,6 +19,7 @@
     "homepage": "https://github.com/trigo155/Proyecto-NodeJS#readme",
     "dependencies": {
         "express": "^4.17.1",
+        "mongoose": "^5.13.5",
         "nodemon": "^2.0.12"
     }
 }
