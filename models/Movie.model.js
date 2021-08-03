@@ -14,7 +14,8 @@ const MovieSchema = new Schema({
         gender: {
             type: String,
             required: true,
-            enum: ['Comedy, Drama, Action, Animation, Musical, Romance, Terror, Sci-fi, Suspense']
+            enum: ['Comedy', 'Drama', 'Action', 'Animation', 'Musical', 'Romance', 'Terror', 'Sci-fi', 'Suspense'],
+
         },
 
     }, { timestamps: true }
