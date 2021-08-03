@@ -1,22 +1,24 @@
 {
-  "name": "oldmovies",
-  "version": "1.0.0",
-  "description": "Proyecto NodeJS",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trigo155/Proyecto-NodeJS.git"
-  },
-  "author": "Juan José Trigo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/trigo155/Proyecto-NodeJS/issues"
-  },
-  "homepage": "https://github.com/trigo155/Proyecto-NodeJS#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "oldmovies",
+    "version": "1.0.0",
+    "description": "Proyecto NodeJS",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon ./index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/trigo155/Proyecto-NodeJS.git"
+    },
+    "author": "Juan José Trigo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/trigo155/Proyecto-NodeJS/issues"
+    },
+    "homepage": "https://github.com/trigo155/Proyecto-NodeJS#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.12"
+    }
 }
