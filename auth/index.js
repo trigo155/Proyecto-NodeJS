@@ -21,7 +21,7 @@ passport.deserializeUser(async(userId, done) => {
 
 const setStrategies = () => {
     passport.use('registro', registerStrategy);
-    passport.use('regisgro', loginStrategy);
+    passport.use('acceso', loginStrategy);
 };
 
 module.exports = { setStrategies };
