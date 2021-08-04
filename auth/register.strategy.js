@@ -19,9 +19,9 @@ const registerStrategy = new LocalStrategy({
     },
     async(req, email, password, done) => {
         try {
-            const existIngUser = await User.findOne({ email });
+            const existingUser = await User.findOne({ email });
 
-            if (existIngUser) {
+            if (existingUser) {
                 const error = new Error('Usuario registrado');
                 return done(error);
             };

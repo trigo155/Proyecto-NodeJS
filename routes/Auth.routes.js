@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 
-router.get('/register', (req, res, next) => {
+router.get('/', (req, res, next) => {
     return res.render('./auth/register');
 });
 
@@ -47,7 +47,7 @@ router.post('/login', (req, res, next) => {
                 return next(error);
             };
             console.log('Usuario registrado: ', user);
-            return res.redirect('/nose');
+            return res.redirect('/');
         });
     };
     passport.authenticate('acceso', done)(req);
