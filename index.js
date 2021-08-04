@@ -21,7 +21,7 @@ app.use('/movies', moviesRoutes);
 
 router.get('/', (req, res) => {
     const msg = 'Proyecto de NodeJS';
-    res.send(msg);
+    res.render('index', { msg });
 })
 
 app.listen(PORT, () => {
