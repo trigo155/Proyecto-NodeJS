@@ -7,7 +7,20 @@
     <title>Movies</title>
 </head>
 <body>
-    <h1>{{title}}--{{year}}</h1>
-    
+
+    <h1>Listado de pelícuas</h1>
+    {{#each movies}}
+
+        <h2>{{title}} ,año {{year}}</h2>
+        <h4>Director: {{director}}</h4>
+        <h3>Reparto: {{actors}}</h3>
+        <h3>{{country}}</h3>
+        <h3>Duración: {{duración}}</h3>
+        <h3>Género: {{gender}}</h3>
+        <p>Resumen: {{summary}}</p>
+
+        <hr/>
+
+    {{/each}}    
 </body>
 </html>
