@@ -1,15 +1,19 @@
 const express = require('express');
+const path = require('path');
+const passport = require('passport');
 const db = require('./db');
-const moviesRoutes = require('./routes/Movie.routes')
+const moviesRoutes = require('./routes/Movie.routes');
 
-const PORT = 3000;
 const app = express();
+const PORT = 3000;
 const router = express.Router();
 db.connect();
 
-const path = require('path');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', router);
 app.use('/movies', moviesRoutes);
