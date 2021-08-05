@@ -9,23 +9,23 @@ const loginStrategy = new LocalStrategy({
     },
     async(req, email, password, done) => {
         try {
-            const existIngUser = await User.findOne({ email });
+            const existingUser = await User.findOne({ email }); // User exists on db
 
-            if (!existIngUser) {
+            if (!existingUser) {
                 const error = new Error('El usuario no existe');
                 error.status = 401;
                 return done(error);
             }
 
-            const isValidPassword = await bcrypt.compare(password, existIngUser.password);
+            const isValidPassword = await bcrypt.compare(password, existingUser.password); // Equal password on db
 
             if (!isValidPassword) {
                 const error = new Error('Revisa lo que has tecleado, la contraseña no es válida');
                 return done(error);
             };
 
-            existIngUser.password = undefined; // Very important to security
-            return done(null, existIngUser)
+            existingUser.password = undefined; // Very important to security
+            return done(null, existingUser)
         } catch (err) {
             return done(err);
         }
